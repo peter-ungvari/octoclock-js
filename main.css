@@ -12,9 +12,10 @@ canvas#canvas {
 
 div.clock-frame {
     display: inline-block;
-    border: 5px dashed rgb(108, 136, 164);
-    padding: 20px;
+    /*border: 5px dashed rgb(108, 136, 164);*/
+    margin: 20px;
     width: auto;
+	vertical-align: top;
 }
 
 span.days {
@@ -22,7 +23,7 @@ span.days {
 }
 
 span.hours {
-    font-size: 5em;
+    font-size: 3.8em;
 }
 
 span.conventional {
