@@ -1,0 +1,31 @@
+body {
+    background-color: #222;
+    text-align: center;
+    font-family: "Lucida Grande",Verdana,Helvetica,Arial,sans-serif;
+    color: rgb(58, 91, 122);
+}
+
+canvas#canvas {
+    /*border:1px solid #333;*/
+    margin: 20px;
+}
+
+div.clock-frame {
+    display: inline-block;
+    /*border: 5px dashed rgb(108, 136, 164);*/
+    margin: 20px;
+    width: auto;
+	vertical-align: top;
+}
+
+span.days {
+    font-size: 3em;
+}
+
+span.hours {
+    font-size: 3.8em;
+}
+
+span.conventional {
+    font-size: 1.3em;
+}
