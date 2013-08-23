@@ -28,7 +28,7 @@ define(function() {
 				return Math.floor(hours * Math.pow(radix, precision));
 			},
 			hours: function(length) {
-				return pad(this.hoursNum(length).toString(radix).split("").reverse().join(""), length);
+				return pad(this.hoursNum(length).toString(radix), length).split("").reverse().join("");
 			},
 			timeNum: function(hoursPrecision) {
 				return this.daysNum * Math.pow(radix, hoursPrecision) + this.hoursNum(hoursPrecision);
