@@ -5,9 +5,9 @@ body {
     color: rgb(58, 91, 122);
 }
 
-canvas#canvas {
-    /*border:1px solid #333;*/
-    margin: 20px;
+canvas {
+	border: 1px solid #333;
+    margin: 20px 0;
 }
 
 div.clock-frame {

@@ -6,11 +6,20 @@ require.config({
 });
 
 var onPageLoaded = function() {
-	require(["views/timeArcsView", "views/textView", "models/octoclock"], 
-			function(timeArcsView, textView, octoclock) {
+	require(["views/threeArcsView", "views/textView", "models/octoclock"], 
+			function(ThreeArcsView, textView, octoclock) {
 		
 		/** Suffix of the page title. */
 		var pageTitleSuffix = " - Octoclock";
+		
+		/** 4-digit octal mask. */ 
+		var octal4DigitMask = [07777, 077770, 0777700];
+		
+		/** Hours view. */
+		var hoursView = new ThreeArcsView($("#canvas")[0], octal4DigitMask);
+		
+		/** Data view. */
+		var dateView = new ThreeArcsView($("#canvas2")[0], octal4DigitMask);
 		
 		/**
 		 * Method to call on each animation frame.
@@ -20,8 +29,9 @@ var onPageLoaded = function() {
 			// get the octal time object from octoclock
 			var octalTime = octoclock.getTime();
 			
-			// update the arcs view
-			timeArcsView.update(octalTime);
+			// update the arcs views
+			hoursView.update(octalTime.hoursNum(6));
+			dateView.update(octalTime.timeNum(3));
 			
 			// extract hours and days from the time object
 			var hoursText = octalTime.hours(4);
