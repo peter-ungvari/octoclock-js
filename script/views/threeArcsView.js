@@ -22,16 +22,19 @@
 			outer: { 
 				radius: 60,
 				color: 'rgb(58, 91, 122)',
+				fadedColor: 'rgba(58, 91, 122, 0.16)',
 				mask: masks[0]
 			},
 			middle: {
 				radius: 45,
 				color: 'rgb(108, 136, 164)',
+				fadedColor: 'rgba(108, 136, 164, 0.09)',
 				mask: masks[1]
 			},
 			inner: {
 				radius: 30,
 				color: 'rgb(158, 181, 206)',
+				fadedColor: 'rgba(158, 181, 206, 0.053)',
 				mask: masks[2]
 			}
 		};
@@ -86,6 +89,10 @@
 				backCtx.beginPath();
 				backCtx.arc(origin.x, origin.y, arcs[i].radius, phase, arcLength, false);
 				backCtx.strokeStyle = arcs[i].color;
+				backCtx.stroke();
+				backCtx.beginPath();
+				backCtx.arc(origin.x, origin.y, arcs[i].radius, phase, arcLength, true);
+				backCtx.strokeStyle = arcs[i].fadedColor;
 				backCtx.stroke();
 			}
 		};
