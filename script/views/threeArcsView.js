@@ -22,19 +22,19 @@
 			outer: { 
 				radius: 60,
 				color: 'rgb(58, 91, 122)',
-				fadedColor: 'rgba(58, 91, 122, 0.16)',
+				fadedColor: 'rgba(58, 91, 122, 0.19)',
 				mask: masks[0]
 			},
 			middle: {
 				radius: 45,
 				color: 'rgb(108, 136, 164)',
-				fadedColor: 'rgba(108, 136, 164, 0.09)',
+				fadedColor: 'rgba(108, 136, 164, 0.11)',
 				mask: masks[1]
 			},
 			inner: {
 				radius: 30,
 				color: 'rgb(158, 181, 206)',
-				fadedColor: 'rgba(158, 181, 206, 0.053)',
+				fadedColor: 'rgba(158, 181, 206, 0.07)',
 				mask: masks[2]
 			}
 		};
