@@ -72,9 +72,9 @@
 		 */
 		var setArcValues = function(natural) {
 			for(var i in arcs) {
-				// apply the mask and normalize the value to 1
+				// apply the mask and normalize the value
 				var arc = arcs[i];
-				arc.value = (natural & arc.mask) / arc.mask;
+				arc.value = (natural & arc.mask) / (arc.mask + 1);
 			}
 		};
 		
