@@ -34,7 +34,7 @@ var onPageLoaded = function() {
 				var octalTime = octoclock.getTime();
 				
 				// update the arcs views
-				hoursView.update(octalTime.hoursNum(5));
+				hoursView.update(octalTime.hoursNum(6));
 				dateView.update(octalTime.timeNum(3));
 				
 				// extract hours and days from the time object
